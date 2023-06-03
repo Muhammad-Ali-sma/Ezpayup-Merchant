@@ -1,0 +1,53 @@
+{
+  "name": "ez-pay-up_merchant-portal",
+  "version": "0.0.1",
+  "description": "EZ Pay Up Merchant Portal",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "deploy": "react-scripts build && aws s3 rm s3://dev.merchant.ezpayup.com/ --recursive && aws s3 cp ./build s3://dev.merchant.ezpayup.com/ --recursive --acl public-read",
+    "eject": "react-scripts eject",
+    "install:clean": "rmdir /S /Q node_modules & del package-lock.json & npm install & npm start"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fullcalendar/core": "^6.1.1",
+    "@fullcalendar/interaction": "^6.1.1",
+    "@fullcalendar/list": "^6.1.4",
+    "@fullcalendar/react": "^6.1.2",
+    "@fullcalendar/timegrid": "^6.1.1",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/lab": "^5.0.0-alpha.48",
+    "@mui/material": "^5.0.1",
+    "@mui/x-date-pickers": "^5.0.16",
+    "@reduxjs/toolkit": "^1.9.1",
+    "axios": "^0.22.0",
+    "bootstrap": "^4.6.0",
+    "date-fns": "^2.29.3",
+    "material-ui-nested-menu-item": "^1.0.2",
+    "moment": "^2.29.4",
+    "react": "^17.0.0",
+    "react-color": "^2.19.3",
+    "react-datetime": "^3.0.4",
+    "react-dom": "^17.0.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^8.2.0",
+    "reactstrap": "^8.9.0",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.2"
+  }
+}
